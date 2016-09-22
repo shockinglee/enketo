@@ -7,6 +7,7 @@ CMD ["bash", "/srv/enketo-express/setup/docker/entrypoint.bash"]
 # apt installs #
 ################
 
+COPY sources.list /etc/apt/sources.list
 WORKDIR /srv
 RUN apt-get update && \
     apt-get upgrade -y
